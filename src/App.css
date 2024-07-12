@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap");
+.popth {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+:root {
+  --bg: rgb(255, 255, 255);
+  --invert: invert(0);
+  --invert2:invert(1)
+  --text: black;
+  --bgshadow: 2px 2px 12px 6px grey;
+  --ds-menu: -5;
+  --font: "Poppins", sans-serif;
+  --fontw: 900;
+}
+[menu-display="hide"] {
+  --ds-menu: -5;
+}
+[menu-display="show"] {
+  --ds-menu: 3;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+[data-theme="dark"] {
+  --bg: black;
+  --invert: invert(1);
+  --invert2:invert(0)
+  --text: white;
+  --bgshadow: 2px 2px 12px 6px rgb(123, 123, 123);
+}
+[data-theme="light"] {
+  --bg: rgb(255, 255, 255);
+  --invert: invert(0);
+  --invert2:invert(1);
+  --text: black;
+  --bgshadow: 2px 2px 12px 6px grey;
+}
+
+.cont {
+  background-color: var(--bg);
+  font-family: var(--font);
+  transition: all 0.5s;
+  overflow: hidden;
+  color: var(--text);
+  font-weight: var(--fontw);
+  width: 100vw;
+  overflow: hidden;
+  font-size: 1em;
+  z-index: 2;
+}
+.jk-font-clr {
+  color: var(--text);
+}
+/* 
+background-image: linear-gradient(to right top, #354865, #00759c, #00a3a7, #00cd7a, #a8eb12);
+background-image: linear-gradient(to right top, #ff00f5, #ff008e, #ff6b2a, #ffb800, #a8eb12);
+background-image: linear-gradient(to right top, #00ffe8, #00ffca, #00ffa0, #00ff6a, #5efd00);
+ */
+/*====================================== for header */
+.jk-header {
+  height: 12vh;
+  font-size: 1.5em;
+}
+.jkimg {
+  filter: var(--invert);
+}
+.jkimg2{
+  filter: var(--invert2);
+}
+.jk-ul a {
+  color: var(--text);
+  font-size: 0.9em;
+}
+
+/* ----------------------------------for MENUBAR */
+.m-out-box {
+  position: absolute;
+  top: 0;
+  backdrop-filter: blur(19px);
+  z-index: var(--ds-menu);
+}
+.m-in-box {
+  background-color: var(--bg);
+  border-radius: 5px;
+  /* box-shadow: var(--bgshadow); */
+}
+.m-in-box a {
+  text-decoration: none;
+  color: var(--text);
+}
+/* ----------------------------for project view */
+.jk-live-pg {
+  color: var(--text);
+}
+.jk-pro-p {
+  height: 15vh;
+}
+.jk-pro {
+  height: auto;
+  transition: all 0.5s;
+}
+.jk-pro:hover {
+  cursor: pointer;
+}
+.jk-pro-input {
+  height: 2.5em;
+}
+
+/* ----------------------------------for secone */
+
+/* 
+background-image: linear-gradient(to right top, #354865, #00759c, #00a3a7, #00cd7a, #a8eb12);
+background-image: linear-gradient(to right top, #ff00f5, #ff008e, #ff6b2a, #ffb800, #a8eb12);
+background-image: linear-gradient(to right top, #00ffe8, #00ffca, #00ffa0, #00ff6a, #5efd00);
+ */
+
+/* for --------------------------------- */
+#sec-1 {
+  z-index: 1;
+  height: 80vh;
+  overflow: hidden;
+  /*background: url(./assets/bgmain.svg);
+   animation: bg-move infinite linear alternate-reverse 3s; */
+
+}
+#circle ,#circle2 {
+  width: 10vmin;
+  height: 10vmin;
+  right: 15vmax;
+  background-image: linear-gradient(to right top, #0066ff, #03d5ff, #0073ff, #0011ff, #004cff);
+  border-radius: 50%;
+  position: relative;
+  bottom: -50px;
+  z-index: 1;
+}
+#circle2{
+  left: 15vmax;
+  bottom: -10em;
+}
+@keyframes bg-move {
+  from {
+    background-size: 0%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+@keyframes bg-move2 {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 0%;
+  }
+}
+.j-sh {
+  position: relative;
+}
+.sh-4 {
+  top: -45vh;
+  left: 0vmax;
+  transform: rotate(-80deg);
+}
+.sh-2 {
+  bottom: -300px;
+  right: -10vmax;
+  transform: rotate(-10deg);
+}
+.sh-1 {
+  bottom: -110vmax;
+  right: -10vmax;
+  transform: rotate(-60deg);
+}
+.sh-3 {
+  bottom: -111vmax;
+  left: -10vmax;
+  transform: rotate(10deg);
+}
+/* for -------------------------------- work experince */
+
+@media (min-width: 1200px) {
+}
+
+/* for -------------------------------- about */
+#jk-about-star {
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotatestar infinite 5s reverse linear;
+}
+#jk-about-starin {
+  animation: rotatestarin infinite 5s reverse linear;
+}
+@keyframes rotatestarin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotatestar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@media (min-width: 700px) {
+  #circle {
+    right: 30vmax;
+  }
+  #circle2{
+    left: 30vmax;
+  }
+  .cont {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1000px) {
+  .cont {
+    font-size: 1.2em;
+  }
+  .jk-work-exp-a {
+    height: auto;
+  }
+  .jk-header {
+    height: 15vh;
+  }
+  .sh-4 {
+    top: -3vmax;
+    left: -5vmax;
+    transform: rotate(-100deg);
+  }
+  .sh-2 {
+    top: -5vmax;
+    right: -5vmax;
+    transform: rotate(-10deg);
+  }
+  .sh-1 {
+    bottom: -5vmax;
+    right: -5vmax;
+    transform: rotate(-60deg);
+  }
+  .sh-3 {
+    bottom: -5vmax;
+    left: -5vmax;
+    transform: rotate(10deg);
+  }
+}
+
+@media (min-width: 1300px) {
+  .cont {
+    font-size: 2em;
+  }
+}
